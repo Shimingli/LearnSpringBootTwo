@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Configuration
 @ConfigurationProperties(prefix="test")
-@PropertySource("classpath:test.properties")
+@PropertySource("classpath:test.properties")//注解@PropertySource("classpath:test.properties")指明了使用哪个配置文件
 @Component
 public class TestConfigBean {
 	private String name;
