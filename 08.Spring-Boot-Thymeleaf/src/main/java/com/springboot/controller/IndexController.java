@@ -11,7 +11,9 @@ import com.springboot.bean.Account;
 
 @Controller
 public class IndexController {
-	
+
+
+	//http://localhost:8080/web/account
 	@RequestMapping("/account")
 	public String index(Model m) {
 		List<Account> list = new ArrayList<Account>();

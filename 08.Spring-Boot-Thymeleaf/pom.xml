@@ -17,7 +17,7 @@
 		<version>1.5.9.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-
+	<!--在Spring Boot 1.5.9.RELEASE版本中，默认的Thymeleaf版本为2.1.6.RELEASE版本，这里推荐使用3.0以上版本。在pom中将Thymeleaf的版本修改为3.0.2.RELEASE：-->
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
