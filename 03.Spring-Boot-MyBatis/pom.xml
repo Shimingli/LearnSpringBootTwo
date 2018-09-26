@@ -30,7 +30,9 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		
-		<!-- https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter -->
+		<!-- https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter
+		 整合MyBatis之前，先搭建一个基本的Spring Boot项目开启Spring Boot。
+		 然后引入mybatis-spring-boot-starter和数据库连接驱动（这里使用关系型数据库Oracle 11g）。 -->
 		<dependency>
 		    <groupId>org.mybatis.spring.boot</groupId>
 		    <artifactId>mybatis-spring-boot-starter</artifactId>
@@ -44,18 +46,17 @@
 		</dependency>
 		
 		<dependency>
-			<groupId>com.oracle</groupId>
-			<artifactId>ojdbc6</artifactId>
-			<version>6.0</version>
-		</dependency>
+		<groupId>com.oracle</groupId>
+		<artifactId>ojdbc6</artifactId>
+		<version>6.0</version>
+	  </dependency>
+
 		<dependency>
 		   <groupId>com.alibaba</groupId>
 		   <artifactId>druid-spring-boot-starter</artifactId>
 		   <version>1.1.6</version>
 		</dependency>
-		
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>

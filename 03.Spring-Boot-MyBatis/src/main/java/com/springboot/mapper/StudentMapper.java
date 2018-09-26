@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 import com.springboot.bean.Student;
 
 @Component
-@Mapper
+@Mapper  // mybatis  todo  20180926
 public interface StudentMapper {
 	@Insert("insert into student(sno,sname,ssex) values(#{sno},#{name},#{sex})")
 	int add(Student student);
