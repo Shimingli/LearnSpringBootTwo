@@ -13,9 +13,11 @@ public class TestController {
 
 	@Autowired
 	private StudentService studentService;
-	
+
+	// 正确的请求的方式 ：http://localhost:8080/web/querystudent?sno=001
 	@RequestMapping( value = "/querystudent", method = RequestMethod.GET)
 	public Student queryStudentBySno(String sno) {
+		System.out.println("queryStudentBySno=="+sno);
 		return this.studentService.queryStudentBySno(sno);
 	}
 }
