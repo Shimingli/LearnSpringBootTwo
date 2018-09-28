@@ -12,6 +12,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 配置方式二
+ * 除了在过滤器类上加注解外，我们也可以通过FilterRegistrationBean来注册过滤器。
+ * 定义一个WebConfig类，加上@Configuration注解表明其为配置类，然后通过FilterRegistrationBean来注册过滤器:
+ */
 @Configuration
 public class WebConfig extends WebMvcConfigurerAdapter {
     @Bean
@@ -19,10 +24,8 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
         TimeFilter timeFilter = new TimeFilter();
         filterRegistrationBean.setFilter(timeFilter);
-
         List<String> urlList = new ArrayList<>();
         urlList.add("/*");
-
         filterRegistrationBean.setUrlPatterns(urlList);
         return filterRegistrationBean;
     }

@@ -11,7 +11,7 @@ public class UserController {
 
     @GetMapping("/{id:\\d+}")
     public void get(@PathVariable String id) {
-        System.out.println(id);
+        System.out.println("获取到get请求的值了="+id +" =6");
         // throw new RuntimeException("user not exist");
     }
 }
