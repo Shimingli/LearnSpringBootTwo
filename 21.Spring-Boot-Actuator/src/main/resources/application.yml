@@ -5,9 +5,11 @@ management:
   security:
     enabled: false #关掉安全认证
   port: 80
-  context-path: /monitor #actuator的访问路径
+  context-path: /shiming #actuator的访问路径
 endpoints:
   shutdown:
-    enabled: true
+    enabled: true #提供了使用post请求来关闭Spring Boot应用的功能。
   beans:
     id: instances
+
+

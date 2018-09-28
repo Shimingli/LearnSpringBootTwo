@@ -15,7 +15,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
-	
+	// 在配置类中添加@EnableSwagger2注解来启用Swagger2，apis()定义了扫描的包路径
 	@Bean
     public Docket buildDocket() {
         return new Docket(DocumentationType.SWAGGER_2)

@@ -23,18 +23,19 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import springfox.documentation.annotations.ApiIgnore;
 
+// http://localhost:8080/swagger-ui.html
 @Api(value = "用户Controller")
 @Controller
 @RequestMapping("user")
 public class UserController {
-
+	// http://localhost:8080/user/hello
 	@ApiIgnore
 	@GetMapping("hello")
 	public @ResponseBody String hello() {
 		return "hello";
 	}
 
-	@ApiOperation(value = "获取用户信息", notes = "根据用户id获取用户信息")
+	@ApiOperation(value = "获取用户信息", notes = "根据用户id获取用户信息---aaa")
 	@ApiImplicitParam(name = "id", value = "用户id", required = true, dataType = "Long", paramType = "path")
 	@GetMapping("/{id}")
 	public @ResponseBody User getUserById(@PathVariable(value = "id") Long id) {
@@ -44,7 +45,8 @@ public class UserController {
 		user.setAge(25);
 		return user;
 	}
-
+	// http://localhost:8080/user/list
+     // [{"id":1,"name":"mrbird","age":25},{"id":2,"name":"scott","age":29}]
 	@ApiOperation(value = "获取用户列表", notes = "获取用户列表")
 	@GetMapping("/list")
 	public @ResponseBody List<User> getUserList() {
