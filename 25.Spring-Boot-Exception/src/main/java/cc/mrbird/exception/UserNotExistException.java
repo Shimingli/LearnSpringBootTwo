@@ -6,7 +6,7 @@ public class UserNotExistException extends RuntimeException{
     private String id;
 
     public UserNotExistException(String id){
-        super("user not exist");
+        super("user not exist----------得到的  ");
         this.id = id;
     }
 
