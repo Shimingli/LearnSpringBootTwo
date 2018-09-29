@@ -7,10 +7,10 @@ spring:
 
 eureka:
   instance:
-    hostname: peer1
+    hostname: peer1 #eureka.instance.hostname指定了Eureka服务端的IP；
   client:
     serviceUrl:
-      defaultZone: http://mrbird:123456@peer2:8081/eureka/
+      defaultZone: http://mrbird:123456@peer2:8081/eureka/ #eureka.client.serviceUrl.defaultZone指定Eureka服务端的地址，默认值为http://localhost:8761/eureka。
   server:
     enable-self-preservation: false
 

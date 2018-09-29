@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
+    <!--搭建Eureka-Server服务注册中心-->
     <groupId>com.example</groupId>
     <artifactId>Eureka-Client</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -23,7 +23,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
     </properties>
-
+    <!--新建一个Spring Boot项目，artifactId填Eureka-Client，然后引入以下依赖：-->
     <dependencyManagement>
         <dependencies>
             <dependency>

@@ -8,6 +8,9 @@ import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * 接着编写一个TestController，对外提供一些REST服务：
+ */
 @RestController
 public class TestController {
 
@@ -16,6 +19,11 @@ public class TestController {
     @Autowired
     private DiscoveryClient client;
 
+    /**
+     * 上面代码注入了org.springframework.cloud.client.discovery.DiscoveryClient对象，可以获取当前服务的一些信息。
+     * host：win7-PC，service_id：Server-Provider
+     * @return
+     */
     @GetMapping("/info")
     public String info() {
         @SuppressWarnings("deprecation")
