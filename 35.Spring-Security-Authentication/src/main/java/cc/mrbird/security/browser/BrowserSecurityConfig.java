@@ -19,9 +19,13 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private MyAuthenticationFailureHandler authenticationFailureHandler;
 
-
+    /**
+     * 此外我们还注入了PasswordEncoder对象，该对象用于密码加密，注入前需要手动配置。我们在BrowserSecurityConfig中配置它：
+     * @return
+     */
     @Bean
     public PasswordEncoder passwordEncoder() {
+        //PasswordEncoder是一个密码加密接口，而BCryptPasswordEncoder是Spring Security提供的一个实现方法，我们也可以自己实现PasswordEncoder。不过Spring Security实现的BCryptPasswordEncoder已经足够强大，它对相同的密码进行加密后可以生成不同的结果。
         return new BCryptPasswordEncoder();
     }
 

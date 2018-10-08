@@ -2,6 +2,10 @@ package cc.mrbird.domain;
 
 import java.io.Serializable;
 
+/**
+ *
+ * 首先创建一个MyUser对象，用于存放模拟的用户数据（实际中一般从数据库获取，这里为了方便直接模拟）：
+ */
 public class MyUser implements Serializable {
     private static final long serialVersionUID = 3497935890426858541L;
 
