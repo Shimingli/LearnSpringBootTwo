@@ -11,6 +11,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/elastic-job/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBootWebservice/pom.xml" />
       </list>
     </option>
   </component>
